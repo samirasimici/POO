@@ -1,6 +1,12 @@
 ﻿namespace ConsoleApp1;
 
-public class User
+public abstract class User
 {
-    test
+    public int Id { get; set; }
+    public string Nume { get; set; }
+    public string Prenume { get; set; }
+    public string Email { get; set; }
+    public string Parola { get; set; }
+
+    public abstract void Meniu();
 }
