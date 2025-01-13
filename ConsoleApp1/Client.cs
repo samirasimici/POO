@@ -48,10 +48,24 @@ public class Client:User
         }
     }
 
+    public void ReviewEveniment(int idEveniment, string review)
+    {
+        Event eveniment = eventManager.GasesteEveniment(idEveniment);
+        if (eveniment != null)
+        {
+            eveniment.Reviewuri.Add(review);
+            Console.WriteLine($"Review-ul tau pentru evenimentul {eveniment.Nume} a fost adaugat cu succes.");
+        }
+        else
+        {
+            Console.WriteLine("Evenimentul nu a fost gasit.");
+        }
+    }
+
     public void VerificareUpdateEvenimente()
     {
         Console.WriteLine("Actualizari pentru evenimentele la care esti inscris:");
-        foreach(var id:in IstoricEvenimente)
+        foreach(var id in IstoricEvenimente)
         {
             Event eveniment = eventManager.GasesteEveniment(id);
             if (eveniment != null)
