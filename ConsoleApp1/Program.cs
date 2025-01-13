@@ -9,7 +9,7 @@ public class Program
         {
             Id = 1,
             Nume = "Andrei",
-            Prenume = "Aldulescu"
+            Prenume = "Aldulescu",
             Email = "andreialdulescu@yahoo.com",
             Parola = "Andrei123"
         };
